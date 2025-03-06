@@ -94,9 +94,11 @@ export default function MainSearch() {
                         })
                     }
                 </div>
-                <p>Los bangs son prefijos de tu búsqueda que te permiten buscar rápidamente en otras páginas.</p>
-                <p>El prefijo <b>!d</b> es un prefijo especial que te permitirá abrir un chat con el que hablar con Deepseek. No requiere inicio de sesion, es anónimo público gratuito y sin límite.</p>
-                <p>Tambien tenemos algunos shortcuts como <b>yt</b> para abrir youtube, entre otros. (Puedes verlos en nuestro github)</p>
+                <div>
+                    <p className="textp">Los bangs son prefijos de tu búsqueda que te permiten buscar rápidamente en otras páginas.</p>
+                    <p className="textp">El prefijo <b>!d</b> es un prefijo especial que te permitirá abrir un chat con el que hablar con Deepseek. No requiere inicio de sesion, es anónimo público gratuito y sin límite.</p>
+                    <p className="textp">Tambien tenemos algunos shortcuts como <b>yt</b> para abrir youtube, entre otros. (Puedes verlos en nuestro <a href="">github</a>)</p>
+                </div>
             </div>
         </div>
     )

@@ -275,6 +275,9 @@ h1,h2,h3,h4,h5,h6 {
   height: 140%;
   z-index: 2;
 }
+.textp {
+  text-align: left;
+}
 .bang-extra {
   position: absolute;
   font-size: 1.5rem;
