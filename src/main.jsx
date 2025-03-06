@@ -78,7 +78,6 @@ if(getQueryParams(window.location.href).q) {
         }
     }
 
-
 }
 
 createRoot(document.getElementById('root')).render(
