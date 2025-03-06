@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: dark light;
+  color: black;
+  background-color: antiquewhite;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+@keyframes rotateTranslated {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.svgcontainer {
+  display: flex;
+  position: relative;
+}
+.svgcontainer svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rotateTranslated > *  {
+  transform-origin: center center;
+  animation: rotateTranslated 0.8s linear infinite;
+}
+.special-2-svgContainer .svgsp-t1 {
+  width: var(--size);
+  height: var(--size);
+  --size: calc(326px / 3.9);
+}
+.special-2-svgContainer .svgsp-t2 {
+  filter: blur(50px);
+}
+.special-2-svgContainer .svgsp-round {
+  width: var(--size);
+  height: var(--size);
+  --size: calc(326px / 4);
+  border-radius: 100%;
+  border: 2px solid rgba(0, 0, 0, .7);
+}
+
+.full-center {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  gap: 120px;
+}
+.full-center:not(.no-bg) {
+  background-image: url('/backg.jpg');
+  background-attachment: fixed;
+}
+.full-center.no-bg {
+  background-color: #faebd7;
+}
+.full-center h1 {
+  font-size: 12rem;
+  font-weight: 9600;
+}
+
+.search-bar svg * {
+  color: white;
+}
+
+.search-bar {
+  background-color: rgba(0, 0, 0, .42);
+  backdrop-filter: blur(10px);
+  border-radius: 999px;
+  padding: 12px 24px;
+  padding-right: 0;
+  align-items: center;
+  gap: 12px;
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, .1);
+}
+
+::selection {
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.command-msg {
+  font-weight: 500;
+  opacity: 0.4;
+}
+
+.input .round-multimedia {
+  width: var(--size);
+  height: var(--size);
+  --size: 40px;
+  opacity: 0.4;
+  border-radius: 100%;
+  border: 1px solid rgba(255,255,255, .4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input .round-multimedia svg * {
+  color: white;
+}
+.input {
+  border-radius: 100px;
+  display: flex;
+  background: #171717;
+  width: 80%;
+  align-items: center;
+  padding: 12px;
+  gap: 12px;
+  margin: auto;
+  bottom: 12px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid rgba(0, 0, 0, .1);
+  box-shadow: 0 0 40px rgba(0, 0, 0, .3);
+}
+.input textarea {
+  border: none;
+  outline: none;
+  outline: none;
+  background: transparent;
+  resize: none;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  color: white;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  margin: 0;
+}
+
+.about-section {
+  background-color: white;
+  padding: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+}
+.about-section h1 span {
+  color: red;
+  opacity: .5;
+  rotate: 12deg;
+  display: inline-block;
+}
+.about-section h1 {
+  color: black;
+  opacity: .9;
+  font-size: 5em;
+  line-height: 1em;
+}
+
+.about-section h1 {
+  position: relative;
+}
+.about-section h1::after {
+  width: var(--size);
+  height: var(--size);
+  pointer-events: none;
+  background-color: red;
+  content: '';
+  top: -100px;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  filter: blur(100px);
+  --size: 200px;
+}
+.search-bar input {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  background: transparent;
+}
+.search-btn {
+  border: none;
+  outline: none;
+  padding: 0 24px;
+  position: relative;
+  height: 100%;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  z-index: 10;
+}
+.search-btn > * {
+  position: relative;
+  z-index: 10;
+}
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.1);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+.ripple {
+  animation: ripple 1s ease-out;
+  width: var(--size);
+  height: var(--size);
+  background-color: rgba(255, 255, 255, .2);
+  transition-duration: 1s;
+  --size: 200px;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  border-radius: 100%;
+}
+.search-btn:hover .ripple-container {
+  transform: translate(-50%, -50%) scale(1.1);
+  opacity: .8;
+}
+.search-btn .ripple-container {
+  background-color: rgba(35, 35, 215, 1);
+  opacity: .5;
+  overflow: hidden;
+  border-radius: 999px;
+  top: 50%;
+  transition-duration: .2s;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100%;
+  height: 140%;
+  z-index: 2;
+}
+.bang-extra {
+  position: absolute;
+  font-size: 1.5rem;
+  color: #bebebe;
+  font-weight: 500;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.bang-container {
+  width: 100%;
+}
+.bang-mark {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin: 12px;
+}
+.bang-element .bang {
+  height: 100%;
+  border-right: 1px solid var(--bang-border);
+  font-family: Inter;
+  width: 46px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 900;
+  font-size: 18px;
+  padding: 12px;
+}
+.bang-mark .icon {
+  display: flex;
+}
+* {
+  --bang-border: rgba(0, 0, 0, .3)
+}
+.bang-container {
+  border-left: 1px solid var(--bang-border);
+  border-top: 1px solid var(--bang-border);
+}
+.bang-container .bang-element {
+  display: flex;
+  float: left;
+  border-right: 1px solid var(--bang-border);
+  border-bottom: 1px solid var(--bang-border);
+  --gap: 0px;
+  margin: var(--gap);
+  width: calc(50% - calc(var(--gap) * 2));
+}
