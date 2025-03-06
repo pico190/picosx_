@@ -30,26 +30,31 @@ export function getQueryParams(url) {
 if(getQueryParams(window.location.href).q) {
     const query = getQueryParams(window.location.href).q;
 
+    let s = false;
     Object.keys(redirect).forEach(redirectm => {
         if(query === redirectm) {
             const redirectData = redirect[redirectm];
             window.location.href = redirectData.redirection;
-            return;
+            s = true;
         }
     })
 
-    let a = false;
-    Object.keys(bangs).forEach(bang => {
-        if(query.startsWith(bang)) {
-            const bangData = bangs[bang];
-            a = true;
-            window.location.href = bangData.redirection.replaceAll("{input}", query.replace(bang, "").trim());
-            return;
+    if(!s) {
+
+        let a = false;
+        Object.keys(bangs).forEach(bang => {
+            if(query.startsWith(bang)) {
+                const bangData = bangs[bang];
+                a = true;
+                window.location.href = bangData.redirection.replaceAll("{input}", query.replace(bang, "").trim());
+                return;
+            }
+        });
+        if(!a) {
+            window.location.href = bangs["<void>"].redirection.replaceAll("{input}", query);
         }
-    });
-    if(!a) {
-        window.location.href = bangs["<void>"].redirection.replaceAll("{input}", query);
     }
+
 
 }
 
