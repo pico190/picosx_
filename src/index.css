@@ -275,6 +275,10 @@ h1,h2,h3,h4,h5,h6 {
   height: 140%;
   z-index: 2;
 }
+.textp a {
+  color: rgba(30, 30, 101, 0.9);
+  text-decoration: none;
+}
 .textp {
   text-align: left;
 }
