@@ -39,7 +39,7 @@ export default function DeepSeekChat() {
             const unicID = block.id;
             const lang = block.className.replace('language-', '');
             const code = block.textContent;
-            const highlightedCode = await codeToHtml(code, {theme: 'catpuccin-mocha', lang: lang});
+            const highlightedCode = await codeToHtml(code, {theme: 'catppuccin-mocha', lang: lang});
 
             $.get(`https://raw.githubusercontent.com/shikijs/textmate-grammars-themes/refs/heads/main/packages/tm-grammars/grammars/${lang}.json`, (data) => {
 
