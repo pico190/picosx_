@@ -22,6 +22,7 @@ Esto no es un buscador que te de resultados con IA y bla bla bla, es un buscador
 <li><b>whats</b>: WhatsApp</li>
 <li><b>disc</b>: Discord</li>
 <li><b>lang1=>lang2</b>: Traductor de google. Ejemplo: es=>en</li>
+<li><b>lang1=>lang2:text</b>: Traductor de google. Ejemplo: es=>en:hola</li>
 </ul>
 
 ---
