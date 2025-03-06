@@ -30,9 +30,9 @@ export function getQueryParams(url) {
 if(getQueryParams(window.location.href).q) {
     const query = getQueryParams(window.location.href).q;
 
-    Object.keys(redirect).forEach(redirect => {
-        if(query === redirect) {
-            const redirectData = redirect[redirect];
+    Object.keys(redirect).forEach(redirectm => {
+        if(query === redirectm) {
+            const redirectData = redirect[redirectm];
             window.location.href = redirectData.redirection;
             return;
         }
