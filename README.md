@@ -20,6 +20,7 @@ Esto no es un buscador que te de resultados con IA y bla bla bla, es un buscador
 <li><b>exc</b>: Excalidraw</li>
 <li><b>gh</b>: Github</li>
 <li><b>whats</b>: WhatsApp</li>
+<li><b>lang1=>lang2</b>: Traductor de google. Ejemplo: es=>en</li>
 </ul>
 
 ---
