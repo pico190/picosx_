@@ -1,5 +1,5 @@
 # Aclaro
-Esto no es un buscador que te de resultados con IA y bla bla bla, es un buscador que te manda a **Google** (aunque tiene bangs muy interesantes para buscar en otras paginas comunes muy rápidamente) y tambien shortcuts a otras páginas.
+Esto no es un buscador que te de resultados con IA y bla bla bla, es un buscador que te manda a **Brave search** (aunque tiene bangs muy interesantes para buscar en otras paginas comunes muy rápidamente) y tambien shortcuts a otras páginas.
 
 ## Bangs
 <ul>
@@ -7,6 +7,7 @@ Esto no es un buscador que te de resultados con IA y bla bla bla, es un buscador
 <li><b>!y</b>: Youtube</li>
 <li><b>!s</b>: Stackoverflow</li>
 <li><b>!w</b>: Wikipedia</li>
+<li><b>!a</b>: Google Search</li>
 <li><b>!d</b>: Deepseek Question¹</li>
 <li><b>!i</b>: Google Images</li>
 </ul>
