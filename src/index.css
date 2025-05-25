@@ -26,6 +26,8 @@ body {
 
 h1 {
   font-family: Inter, sans-serif;
+  letter-spacing: -0.05em;
+  font-weight: 900;
 }
 
 @keyframes rotateTranslated {
