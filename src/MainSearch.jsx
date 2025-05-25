@@ -97,6 +97,7 @@ export default function MainSearch() {
                 <div>
                     <p className="textp">Los bangs son prefijos de tu búsqueda que te permiten buscar rápidamente en otras páginas.</p>
                     <p className="textp">El prefijo <b>!d</b> es un prefijo especial que te permitirá abrir un chat con el que hablar con Deepseek. No requiere inicio de sesion, es anónimo público gratuito y sin límite.</p>
+                    <p className="textp">El prefijo <b>!ch</b> es un prefijo especial que creará un nuevo chat directamente usando ChoniGPT (si tienes una cuenta claro).</p>
                     <p className="textp">Tambien tenemos algunos shortcuts como <b>yt</b> para abrir youtube, entre otros. (Puedes verlos en nuestro <a href="https://github.com/pico190/picosx_">github</a>)</p>
                 </div>
             </div>
