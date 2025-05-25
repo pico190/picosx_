@@ -179,7 +179,7 @@ h1,h2,h3,h4,h5,h6 {
   gap: 24px;
 }
 .about-section h1 span {
-  color: red;
+  color: blue;
   opacity: .5;
   rotate: 12deg;
   display: inline-block;
@@ -198,7 +198,7 @@ h1,h2,h3,h4,h5,h6 {
   width: var(--size);
   height: var(--size);
   pointer-events: none;
-  background-color: red;
+  background-color: blue;
   content: '';
   top: -100px;
   display: block;
