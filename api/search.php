@@ -27,7 +27,7 @@ $bangs = [
     ],
     '!d' => [
         "name" => "Deepseek",
-        "redirection" => "?deepseek=true&a={input}"
+        "redirection" => "https://picosx.vercel.app/?deepseek=true&a={input}"
     ],
     '!i' => [
         "name" => "Google Images",
@@ -68,6 +68,26 @@ if (isset($params['q'])) {
             'name' => 'ChatGPT',
             'redirection' => 'https://chatgpt.com/',
         ],
+        'ch' => [
+            'name' => 'ChoniGPT',
+            'redirection' => 'https://chonigpt.vercel.app',
+        ],
+        'cgpt' => [
+            'name' => 'ChoniGPT',
+            'redirection' => 'https://chonigpt.vercel.app',
+        ],
+        'chonigpt' => [
+            'name' => 'ChoniGPT',
+            'redirection' => 'https://chonigpt.vercel.app',
+        ],
+        'dyt' => [
+            'name' => 'Youtubed',
+            'redirection' => 'https://youtubedd.vercel.app',
+        ],
+        'youtubed' => [
+            'name' => 'Youtubed',
+            'redirection' => 'https://youtubedd.vercel.app',
+        ],
         'yt' => [
             'name' => 'Youtube',
             'redirection' => 'https://www.youtube.com/',
@@ -78,11 +98,23 @@ if (isset($params['q'])) {
         ],
         'time' => [
             'name' => 'Open clock',
-            'redirection' => '/?clock=true',
+            'redirection' => 'https://picosx.vercel.app/?clock=true',
         ],
         'gh' => [
             'name' => 'Github',
             'redirection' => 'https://github.com/',
+        ],
+        'git' => [
+            'name' => 'Github',
+            'redirection' => 'https://github.com/',
+        ],
+        'github' => [
+            'name' => 'Github',
+            'redirection' => 'https://github.com/',
+        ],
+        'whatsapp' => [
+            'name' => 'WhatsApp',
+            'redirection' => 'https://web.whatsapp.com/',
         ],
         'whats' => [
             'name' => 'WhatsApp',
@@ -91,6 +123,10 @@ if (isset($params['q'])) {
         'disc' => [
             'name' => 'Discord',
             'redirection' => 'https://discord.com/',
+        ],
+        'tw' => [
+            'name' => 'Twitter (X)',
+            'redirection' => 'https://twitter.com/',
         ],
         'twitter' => [
             'name' => 'Twitter (X)',
@@ -111,7 +147,7 @@ if (isset($params['q'])) {
     ];
 
     // Check redirecciones exactas
-    if (array_key_exists($query, $redirects)) {
+    if (array_key_exists(strtolower($query), $redirects)) {
         redirectTo($redirects[$query]['redirection']);
     }
 

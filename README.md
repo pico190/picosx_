@@ -19,9 +19,13 @@ Esto no es un buscador que te de resultados con IA y bla bla bla, es un buscador
 ## Shortcuts
 <ul>
 <li><b>gpt</b>: ChatGPT</li>
+<li><b>chonigpt</b> o <b>cgpt</b> o <b>ch</b>: ChoniGPT</li>
 <li><b>yt</b>: Youtube</li>
+<li><b>dyt</b> o <b>youtubed</b>: Youtubed</li>
 <li><b>exc</b>: Excalidraw</li>
+<li><b>time</b>: Open clock</li>
 <li><b>gh</b>: Github</li>
+<li><b>tw</b>: Twitter (X)</li>
 <li><b>whats</b>: WhatsApp</li>
 <li><b>disc</b>: Discord</li>
 <li><b>lang1=>lang2</b>: Traductor de google. Ejemplo: es=>en</li>
