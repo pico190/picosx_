@@ -85,7 +85,7 @@ export default function MainSearch() {
             name="q"
             value={inputValue}
             type="text"
-            placeholder="Busca aqui jaja"
+            placeholder="Buscar"
             onChange={change}
           />
           <button className="search-btn" type="submit" onClick={click}>
