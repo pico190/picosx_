@@ -9,10 +9,12 @@ Esto no es un buscador que te de resultados con IA y bla bla bla, es un buscador
 <li><b>!w</b>: Wikipedia</li>
 <li><b>!a</b>: Google Search</li>
 <li><b>!d</b>: Deepseek Question¹</li>
+<li><b>!ch</b>: ChoniGPT²</li>
 <li><b>!i</b>: Google Images</li>
 </ul>
 
 > ¹ Se hace una pregunta (sin iniciar sesión) a Deepseek R1 desde nuestros servidores, públicamente y sin límite.
+> ² Crea un nuevo chat en ChoniGPT si tienes una cuenta creada.
 
 ## Shortcuts
 <ul>
