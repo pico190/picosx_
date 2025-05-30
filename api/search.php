@@ -1,6 +1,14 @@
 <?php
 
 $bangs = [
+    '!ytbed' => [
+        'name' => 'Youtubed downloader',
+        'redirection' => 'https://youtubedd.vercel.app/?url={input}&referer=picosx',
+    ],
+    '!ch' => [
+        'name' => 'ChoniGPT',
+        'redirection' => 'https://chonigpt.vercel.app/app/?createChat={input}&referer=picosx'
+    ],
     '!gh' => [
         "name" => "Github",
         "redirection" => "https://github.com/search?q={input}"
@@ -20,10 +28,6 @@ $bangs = [
     '!w' => [
         "name" => "Wikipedia",
         "redirection" => "https://en.wikipedia.org/wiki/Special:Search?search={input}"
-    ],
-    '!ch' => [
-        'name' => 'ChoniGPT',
-        'redirection' => 'https://chonigpt.vercel.app/app/?createChat={input}&referer=picosx'
     ],
     '!d' => [
         "name" => "Deepseek",
@@ -71,10 +75,6 @@ if (isset($params['q'])) {
         'ch' => [
             'name' => 'ChoniGPT',
             'redirection' => 'https://chonigpt.vercel.app',
-        ],
-        'ytbed' => [
-            'name' => 'Youtubed downloader',
-            'redirection' => 'https://youtubedd.vercel.app/?url={input}&referer=picosx',
         ],
         'cgpt' => [
             'name' => 'ChoniGPT',
@@ -155,26 +155,13 @@ if (isset($params['q'])) {
         redirectTo($redirects[$query]['redirection']);
     }
 
-    $selectedBang = null;
-
     // Check bangs
     foreach ($bangs as $bang => $data) {
         if (str_starts_with($query, $bang)) {
-            if (isset($selectedBang)) {
-                if (strlen($selectedBang) < strlen($bang)) {
-                    $selectedBang = $bang;
-                }
-            } else {
-                $selectedBang = $bang;
-            }
+            $input = trim(str_replace($bang, "", $query));
+            $url = str_replace("{input}", urlencode($input), $data['redirection']);
+            redirectTo($url);
         }
-    }
-
-    if (isset($selectedBang)) {
-        $input = trim(str_replace($selectedBang, "", $query));
-        $url = str_replace("{input}", urlencode($input), $data['redirection']);
-        redirectTo($url);
-        exit;
     }
 
     // Check traducción tipo "en=>es:hello"
