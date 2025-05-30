@@ -72,6 +72,10 @@ if (isset($params['q'])) {
             'name' => 'ChoniGPT',
             'redirection' => 'https://chonigpt.vercel.app',
         ],
+        'ytbed' => [
+            'name' => 'Youtubed downloader',
+            'redirection' => 'https://youtubedd.vercel.app/?url={input}&referer=picosx',
+        ],
         'cgpt' => [
             'name' => 'ChoniGPT',
             'redirection' => 'https://chonigpt.vercel.app',
