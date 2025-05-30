@@ -161,9 +161,7 @@ if (isset($params['q'])) {
     foreach ($bangs as $bang => $data) {
         if (str_starts_with($query, $bang)) {
             if (isset($selectedBang)) {
-                if (strlen($selectedBang) > strlen($bang)) {
-                    continue;
-                } else {
+                if (strlen($selectedBang) < strlen($bang)) {
                     $selectedBang = $bang;
                 }
             } else {
@@ -176,6 +174,7 @@ if (isset($params['q'])) {
         $input = trim(str_replace($selectedBang, "", $query));
         $url = str_replace("{input}", urlencode($input), $data['redirection']);
         redirectTo($url);
+        exit;
     }
 
     // Check traducción tipo "en=>es:hello"
