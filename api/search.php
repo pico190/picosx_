@@ -155,13 +155,27 @@ if (isset($params['q'])) {
         redirectTo($redirects[$query]['redirection']);
     }
 
+    $selectedBang = null;
+
     // Check bangs
     foreach ($bangs as $bang => $data) {
         if (str_starts_with($query, $bang)) {
-            $input = trim(str_replace($bang, "", $query));
-            $url = str_replace("{input}", urlencode($input), $data['redirection']);
-            redirectTo($url);
+            if (isset($selectedBang)) {
+                if (strlen($selectedBang) > strlen($bang)) {
+                    continue;
+                } else {
+                    $selectedBang = $bang;
+                }
+            } else {
+                $selectedBang = $bang;
+            }
         }
+    }
+
+    if (isset($selectedBang)) {
+        $input = trim(str_replace($selectedBang, "", $query));
+        $url = str_replace("{input}", urlencode($input), $data['redirection']);
+        redirectTo($url);
     }
 
     // Check traducción tipo "en=>es:hello"
